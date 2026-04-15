@@ -1,0 +1,311 @@
+$accent-color: #40b3c2;
+$text-secondary: #888;
+$bg-light: #f0faff;
+
+@mixin container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: $bg-light;
+    max-width: 1250px;
+    margin: auto;
+    border-radius: 14px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .nav {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+
+        li {
+            p {
+                text-decoration: none;
+                color: $text-secondary;
+                font-size: 16px;
+                padding-bottom: 5px;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    .btn {
+        background-color: $accent-color;
+        color: white;
+        text-decoration: none;
+        padding: 10px 25px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        border: none;
+
+        &:hover {
+            background-color: darken($accent-color, 10%);
+        }
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    @include container();
+}
+
+.hero-text-content {
+    flex: 0 0 45%;
+    max-width: 500px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #2d3436;
+}
+
+.hero-title .accent {
+    color: #40b3c2;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: #636e72;
+    margin-bottom: 40px;
+}
+
+.btn2 {
+    display: inline-block;
+    background-color: #40b3c2;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.btn2:hover {
+    background-color: #359aa8;
+}
+
+.hero-graphic-container {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-graphic-image {
+    max-width: 100%;
+    height: auto;
+
+
+}
+
+.zag {
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    justify-content: space-evenly;
+
+    h1 {
+        font-size: 38px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 160%;
+        color: #636e72;
+    }
+}
+
+.section2 {
+    display: flex;
+    max-width: 1250px;
+    margin: auto;
+    margin-top: 90px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .card {
+        width: 200px;
+        background-color: rgb(106, 162, 169);
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-evenly;
+        padding: 30px;
+        border-radius: 20px;
+        padding-bottom: 40px;
+
+        h3 {
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            color: rgb(178, 181, 182);
+        }
+
+    }
+}
+
+.section3 {
+    @include container();
+    margin-top: 80px;
+
+    .main {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .m2 {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+        }
+    }
+
+    aside {
+        width: 40%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+
+        h1 {
+            font-size: 46px;
+            font-weight: 700;
+            line-height: 48px;
+        }
+
+        button {
+            color: $accent-color;
+            padding: 15px 20px;
+            border: 1px solid $accent-color;
+            border-radius: 10px;
+        }
+
+        p {
+            font-size: 19px;
+            line-height: 28px;
+            font-weight: 400;
+            color: rgba(101, 100, 100, 1);
+        }
+
+    }
+}
+
+.section4 {
+    margin: auto;
+    margin-top: 90px;
+    background: linear-gradient(rgba(16, 41, 45, 0.76), rgba(16, 41, 45, 0.76)), url(./forimg/image\ \(10\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1270px;
+    height: 501px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 90px;
+
+    h1 {
+        color: white;
+        font-weight: 700;
+        font-size: 58px;
+    }
+
+    p {
+        font-size: 30px;
+        font-weight: 400;
+        color: white;
+        letter-spacing: 2px;
+    }
+    div:last-child {
+        p {
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.card2 {
+    width: 300px;
+    background-color: rgba(163, 224, 232, 1);
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 30px;
+    border-radius: 20px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid rgba(53, 175, 191, 0.83);
+
+    h3 {
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(112, 114, 115, 1);
+    }
+
+}
+    .btnft {
+        background-color: $accent-color;
+        color: white;
+        text-decoration: none;
+        padding: 10px 25px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        border: none;
+
+        &:hover {
+            background-color: darken($accent-color, 10%);
+        }
+    }
